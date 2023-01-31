@@ -1,3 +1,6 @@
+*{
+     position: relative;
+}
 body{
      margin: 0;
      padding: 0;
@@ -27,6 +30,7 @@ body{
      flex-direction: column;
      justify-content: center;
      align-items: center;
+     color: white;
 }
 
 .container {
@@ -46,7 +50,8 @@ body{
 }
 
 .card{
-     width: clamp(400px, 40%, 800px);
+     width: 700px;
+     min-width: 200px;
      position: relative;
      display: flex;
      align-items: center;
@@ -101,6 +106,10 @@ body{
      font-size: clamp(12px, 1vw, 30px);
 }
 
+.edit{
+     right: 6%;
+}
+
 .close:hover{
      background: #a5adc9;
      transition: all 1s;
@@ -119,4 +128,132 @@ body{
      padding: 0 2%;
      background: burlywood;
      margin: 2% 0 0 0 ;
+}
+
+.feedbackForm{
+     position: relative;
+     width: 90%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+}
+
+.group {
+     position: relative;
+     width: 60%;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+}
+
+.group input[type="text"]{
+     width: 100%;
+     padding: 2%;
+     border: none;
+}
+
+.group input:focus{
+     outline: none;
+     border: none;
+}
+
+.group button[type="submit"]{
+     position: absolute;
+     right: 1%;
+}
+
+.btn{
+     width: clamp(60px, 20%, 120px);
+     padding: 1%;
+     border-radius: 0.2vw;
+     font-size: clamp(13px,0.8vw,16px);
+     letter-spacing: 0.05vw;
+}
+
+.btn-primary{
+     background: #030325c9;
+     color: white;
+}
+
+.btn-primary:hover{
+     cursor: pointer;
+     background: #17175ec9;
+}
+
+.btn-secondary{
+     background:crimson;
+     color: white;
+}
+
+button:disabled{
+     background: gray;
+     color: #051c68;
+}
+
+.input-message{
+     color: crimson;
+}
+
+.ratingList{
+     position: relative;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     list-style-type: none;
+     width: 90%;
+}
+
+.ratingList li{
+     width: 9%;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+
+}
+
+.ratingList li input[type="radio"]{
+     width: 100%;
+     accent-color: rgb(112, 114, 6);
+     aspect-ratio: 1/1;
+     visibility:visible;
+     margin: 0;
+     padding: 0;
+     border: none;
+     outline: none;
+
+}
+
+.ratingList li input[type='radio']:checked{
+     background: blueviolet;
+}
+
+.ratingList li label{
+     position: absolute;
+     padding: 0;
+     color: rgb(39, 39, 39);
+     font-size: clamp(11px, 1.1vw, 22px);
+     font-weight: 600;
+}
+
+.AboutIcon{
+     width: clamp(60px, 4%, 120px); 
+     aspect-ratio: 1/1;
+     background: rgb(241, 10, 48);
+     color: white;
+     position: fixed;
+     right: 1%;
+     bottom: 1%;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content:  center;
+     font-size: 1.6vw;
+     border-radius: 50%;
+}
+.AboutIcon:hover{
+     cursor: pointer;
 }
